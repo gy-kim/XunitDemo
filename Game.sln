@@ -1,0 +1,23 @@
+
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GameEngine", "GameEngine\GameEngine.csproj", "{A59AFC16-D96C-4CB4-9A72-B3459CE07C53}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GameEngine.Tests", "GameEngine.Tests\GameEngine.Tests.csproj", "{574DB2D5-161D-4BA6-A06A-DC23C9A9702E}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{A59AFC16-D96C-4CB4-9A72-B3459CE07C53}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A59AFC16-D96C-4CB4-9A72-B3459CE07C53}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A59AFC16-D96C-4CB4-9A72-B3459CE07C53}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A59AFC16-D96C-4CB4-9A72-B3459CE07C53}.Release|Any CPU.Build.0 = Release|Any CPU
+		{574DB2D5-161D-4BA6-A06A-DC23C9A9702E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{574DB2D5-161D-4BA6-A06A-DC23C9A9702E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{574DB2D5-161D-4BA6-A06A-DC23C9A9702E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{574DB2D5-161D-4BA6-A06A-DC23C9A9702E}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal
