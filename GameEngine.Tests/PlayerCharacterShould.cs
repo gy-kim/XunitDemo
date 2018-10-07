@@ -78,5 +78,21 @@ namespace GameEngine.Tests
 
             Assert.Matches("[A-Z]{1}[a-z]+ [A-Z]{1}[a-z]+", sut.FullName);
         }
+
+        [Fact]
+        public void StartWithDefaultHealth()
+        {
+            PlayerCharacter sut = new PlayerCharacter();
+
+            Assert.Equal(100, sut.Health);
+        }
+
+        [Fact]
+        public void StartWithDefaultHealth_NotEqualExample()
+        {
+            PlayerCharacter sut = new PlayerCharacter();
+
+            Assert.NotEqual(0, sut.Health);
+        }
     }
 }
