@@ -20,4 +20,7 @@
   <ItemGroup>
     <ProjectReference Include="..\GameEngine\GameEngine.csproj" />
   </ItemGroup>
+  <ItemGroup>
+    <Compile Remove="NonPlayerCharacter.cs" />
+  </ItemGroup>
 </Project>
