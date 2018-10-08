@@ -1,4 +1,3 @@
-using System;
 using Xunit;
 
 namespace GameEngine.Tests
@@ -54,7 +53,7 @@ namespace GameEngine.Tests
             sut.FirstName = "SARAH";
             sut.LastName = "SMITH";
 
-            Assert.Equal("Sarah Smith", sut.FullName, ignoreCase:true);
+            Assert.Equal("Sarah Smith", sut.FullName, ignoreCase: true);
         }
 
         [Fact]
@@ -70,7 +69,7 @@ namespace GameEngine.Tests
 
         [Fact]
         public void CalculateFullNameWithTitleCase()
-        {  
+        {
             PlayerCharacter sut = new PlayerCharacter();
 
             sut.FirstName = "Sarah";
@@ -112,6 +111,53 @@ namespace GameEngine.Tests
             var sut = new PlayerCharacter();
 
             Assert.Null(sut.Nickname);
+        }
+
+        [Fact]
+        public void HaveALongBow()
+        {
+            var sut = new PlayerCharacter();
+
+            Assert.Contains("Long Bow", sut.Weapons);
+        }
+
+        [Fact]
+        public void NotHaveAStaffOfWonder()
+        {
+            var sut = new PlayerCharacter();
+
+            Assert.DoesNotContain("Staff Of Wonder", sut.Weapons);
+        }
+
+        [Fact]
+        public void HaveAtLeastOneKindOfSword()
+        {
+            var sut = new PlayerCharacter();
+
+            Assert.Contains(sut.Weapons, weapon => weapon.Contains("Sword"));
+        }
+
+        [Fact]
+        public void HaveAllExpectedWeapons()
+        {
+            var sut = new PlayerCharacter();
+
+            var expectedWeapons = new[]
+            {
+                "Long Bow",
+                "Short Bow",
+                "Short Sword",
+            };
+
+            Assert.Equal(expectedWeapons, sut.Weapons);
+        }
+
+        [Fact]
+        public void HaveNoEmptyDefaultWeapons()
+        {
+            var sut = new PlayerCharacter();
+
+            Assert.All(sut.Weapons, weapon => Assert.False(string.IsNullOrWhiteSpace(weapon)));
         }
     }
 }
