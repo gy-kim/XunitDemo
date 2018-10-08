@@ -94,5 +94,15 @@ namespace GameEngine.Tests
 
             Assert.NotEqual(0, sut.Health);
         }
+
+        [Fact]
+        public void IncreaseHealthAfterSleeping()
+        {
+            PlayerCharacter sut = new PlayerCharacter();
+
+            sut.Sleep();  // Expect increase between 1 to 100 inclusive
+
+            Assert.True(sut.Health >= 100 && sut.Health <= 200);
+        }
     }
 }
